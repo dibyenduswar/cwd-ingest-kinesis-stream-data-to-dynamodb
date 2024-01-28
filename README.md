@@ -2,14 +2,15 @@
 Ingest AWS Kinesis stream data into Dynamodb by triggering the Lambda function
 
 Steps:
-  Create a Dynamodb Table -> Copy ARN
-  Create a Kinesis Data Stream -> Copy ARN
-  Create a Lambda Function -> 
-    Give Permission to the Following Services for the Lambda:
-      CloudWatch
-      Dynamodb Table (Eg. Custom Policy with ARN)
-      Kinesis Data Stream (Eg. Custom Policy with ARN)
-    Eg:
+
+Create a Dynamodb Table -> Copy ARN
+Create a Kinesis Data Stream -> Copy ARN
+Create a Lambda Function -> 
+	Give Permission to the Following Services for the Lambda:
+      		CloudWatch
+      		Dynamodb Table (Eg. Custom Policy with ARN)
+      		Kinesis Data Stream (Eg. Custom Policy with ARN)
+	Eg:
 
 ```
 {
