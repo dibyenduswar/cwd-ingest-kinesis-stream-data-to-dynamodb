@@ -46,7 +46,9 @@ Steps:
   Deploy The Lambda Function
   Test the functionality using the AWS SDK client
     Eg: 
+    
     ```
     aws kinesis put-record --stream-name my-data-stream --partition-key 124 --cli-binary-format raw-in-base64-out --data "HelloWorld!
     ```
+    
   Now check the Dynamodb table. It should contain the 'HelloWorld' data.
