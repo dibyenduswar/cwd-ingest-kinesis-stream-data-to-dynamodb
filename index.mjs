@@ -1,4 +1,3 @@
-
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
   DynamoDBDocumentClient,
@@ -7,7 +6,7 @@ import {
 const REGION = "us-east-1"; 
 const client = new DynamoDBClient({region: REGION});
 const dynamo = DynamoDBDocumentClient.from(client);
-const tableName = "my-streaming-data";
+const tableName = "stream-data-table";
 
 export const handler = async (event) => {  
   
