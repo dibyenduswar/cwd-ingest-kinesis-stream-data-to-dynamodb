@@ -1,6 +1,8 @@
 # cwd-ingest-kinesis-stream-data-to-dynamodb
 Ingest AWS Kinesis stream data into Dynamodb by triggering the Lambda function
 
+Read the full article: https://codewithdweep.com/javascript/ingest-kinesis-stream-data-into-dynamodb-using-lambda/
+
 Steps:
 
 Create a Dynamodb Table -> Copy ARN
@@ -17,7 +19,6 @@ Create a Lambda Function ->
 	"Version": "2012-10-17",
 	"Statement": [
 		{
-			"Sid": "VisualEditor0",
 			"Effect": "Allow",
 			"Action": [
 				"kinesis:UpdateStreamMode",
@@ -30,13 +31,11 @@ Create a Lambda Function ->
 			"Resource": "*"
 		},
 		{
-			"Sid": "VisualEditor1",
 			"Effect": "Allow",
 			"Action": "kinesis:*",
 			"Resource": "arn:aws:kinesis:us-east-1:842551175243:stream/my-data-stream"
 		},
 		{
-			"Sid": "VisualEditor0",
 			"Effect": "Allow",
 			"Action": "dynamodb:PutItem",
 			"Resource": "arn:aws:dynamodb:us-east-1:842551175243:table/my-streaming-data"
